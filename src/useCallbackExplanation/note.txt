@@ -22,3 +22,6 @@ const onItemClick = useCallback(event => {
 - we should avoid it while using, rendering simple child component.
 Using inline functions in cases like that, will not cause big problems with 
 performance. 
+
+6. useCallback and useMemo main difference. UseMemo - returns value.
+useCallback returns function.
