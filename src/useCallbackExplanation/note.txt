@@ -1,0 +1,24 @@
+1. UseCallback - returns memorized callback.
+That memorized callback only changes when some of dependency's changed.
+UseCallback(fn, deps) is equivalent to useMemo(() => fn, deps).
+
+2. Shold every callback function be wrapped inside callback? 
+- No, it can slow your page. A few inline functions per component
+are acceptable.
+
+3. Now it works in few words? 
+- useCallback(callbackEvn, deps) - while giving save dependency
+values, hook retursn same function instance between rendering.
+
+4. Name good example of using it.
+- lets say we have products list. And we want to do smth with 1 of
+them onClick. Example:
+
+const onItemClick = useCallback(event => {
+  console.log('You clicked ', event.currentTarget);
+}, [productElement]); // as long as we click same product element, function's memorized and not rerendered
+
+5. Bad example of using.
+- we should avoid it while using, rendering simple child component.
+Using inline functions in cases like that, will not cause big problems with 
+performance. 
