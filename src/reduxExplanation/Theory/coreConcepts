@@ -1,0 +1,14 @@
+1. One source of truth:
+
+- in comparison to traditional applications, with store saved in
+multipla places. Redux has only 1 place to save state - store.
+It makes developer life much easeier. 
+
+2. The read only state
+- state changes are predictable. Actions are processed 1 at a time.
+Actions are plain objects. It can be easy logged, stored, replayed
+
+3. Reducers are pure functions
+
+- we never modify reducers, they get value and return NEW value.
+Reducers like that is also easy to combine

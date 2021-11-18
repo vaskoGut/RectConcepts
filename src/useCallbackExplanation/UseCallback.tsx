@@ -4,6 +4,8 @@ import List from "./List";
 const UseCallbackExplanation = () => {
   const [number, setNumber] = useState(1);
   const [theme, setTheme] = useState(false);
+
+  console.log("rerender");
   const getNumbers = useCallback(
     (index: number) => {
       console.log("number", number);
