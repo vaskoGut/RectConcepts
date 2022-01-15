@@ -1,0 +1,11 @@
+1. Empty array = works as componentDidMount
+useEffect(() => {
+...
+}, [])
+
+2. UseEffect without empty array - it works same
+as componentDidmount, componentDidUpdate.
+
+3. If we set some variable inside dependency array
+useEffect inside code will run once onmount or when this
+variable is changed.
